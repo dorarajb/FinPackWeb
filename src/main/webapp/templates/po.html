@@ -1,0 +1,19 @@
+<div>
+Select PO number : <select ng-model="poModel" ng-options="po.poNumber for po in poList" ng-change="displayPO(poModel)">
+</select>
+    <table>
+    	<tr><td>PO Number: </td><td>{{ po.poNumber }}</td></tr>
+        <tr><td>PO Date: </td><td>{{po.poDate.dayOfMonth}}/{{po.poDate.monthValue}}/{{po.poDate.year}}</td></tr>
+        <tr><td>Supplier Id: </td><td>{{po.supplierId}}</td></tr>
+        <tr><td>Order Date: </td><td>{{po.orderDate.dayOfMonth}}/{{po.orderDate.monthValue}}/{{po.orderDate.year}}</td></tr>
+        <tr><td>Required Date: </td><td>{{po.requiredDate.dayOfMonth}}/{{po.requiredDate.monthValue}}/{{po.requiredDate.year}}</td></tr>
+        <tr><td>ShipTo: </td><td>{{po.shipToId}}</td></tr>
+        <tr><td>Net Amount: </td><td>{{po.poNetAmount}}</td></tr>
+        <tr><td>Gross Amount: </td><td>{{po.poGrossAmount}}</td></tr>
+        <tr><td>Discount: </td><td>{{po.poDiscount}}</td></tr>
+        <tr><td>Payment Method: </td><td>{{po.paymentMethod}}</td></tr>
+        <tr><td>Payment Terms: </td><td>{{po.paymentTermsId}}</td></tr>
+        <tr><td>Shipping Terms: </td><td>{{po.shippingTermsId}}</td></tr>
+        <tr><td>PO Notes: </td><td>{{po.poNotes}}</td></tr>
+    </table>
+</div>
